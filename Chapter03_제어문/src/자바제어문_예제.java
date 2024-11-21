@@ -47,16 +47,18 @@ public class 자바제어문_예제 {
 		System.out.print("달을 입력하세요(1~12):");
 		int month = Scan.nextInt();
 		
-		if(month>12)
-			System.out.println("값을 잘못 입력하셨습니다");
+		
 		if(month>=3 && month <6)
 			System.out.println("봄");
 		if(month>=6 && month <9)
 			System.out.println("여름");
 		if(month>=9 && month <12)
 			System.out.println("가을");
-		if(month==12 || month <3)
+		if((month==12 || month <3) && (month==12 || month >0))
 			System.out.println("겨울");
+		else
+			System.out.println("값을 잘못 입력하셨습니다");
+
 	}
 
 }
