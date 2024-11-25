@@ -11,7 +11,26 @@
 
 import java.util.Scanner;
 public class 자바제어문_단일조건문3 {
-
+/*
+ *   기본 : 비교연산자 
+ *         논리연산자 ==> 부정연산자 
+ *         
+ *         && => 어디에서 어디까지  ==> 사이에 있다면 
+ *         || => 범위에 없는 경우 
+ *         
+ *         예)
+ *            0~100 
+ *            a>=0 && a<=100 ==> 처리 
+ *            
+ *            a<0 or a>100 ==> 다시 입력을 요청하는 경우
+ *            
+ *            연산자 
+ *              오라클 / javascript / 파이썬 
+ *              
+ *            1~10 11~20
+ *            a>=1 and a<=10
+ *            
+ */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scan=new Scanner(System.in);
