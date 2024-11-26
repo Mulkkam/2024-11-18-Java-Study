@@ -3,30 +3,19 @@ public class 반복문_5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int sum=0;
-		for(int i=0;i<=100;i+=3)
-		{
-			sum+=i;
-			System.out.println("sum="+sum+",i="+i);
-		}
-		System.out.println("1~100까지 사이의 총합:"+sum);
-
-		int sum1=0;
-		for(int i=0;i<=100;i+=5)
-		{
-			sum1+=i;
-			System.out.println("sum="+sum1+",i="+i);
-		}
-		System.out.println("1~100까지 사이의 총합:"+sum1);
-
-		int sum2=0;
-		for(int i=0;i<=100;i+=7)
-		{
-			sum2+=i;
-			System.out.println("sum="+sum2+",i="+i);
-		}
-		System.out.println("1~100까지 사이의 총합:"+sum2);
-
+        int a3=0,a5=0,a7=0;
+        for(int i=1;i<=100;i++)
+        {
+        	if(i%3==0) //3의 배수라면  i=15 
+        		a3+=i;
+        	if(i%5==0)
+        		a5+=i;
+        	if(i%7==0)
+        		a7+=i;
+        }
+        System.out.println("1~100 사이의 3의 배수합:"+a3);
+        System.out.println("1~100 사이의 5의 배수합:"+a5);
+        System.out.println("1~100 사이의 7의 배수합:"+a7);
 	}
 
 }
