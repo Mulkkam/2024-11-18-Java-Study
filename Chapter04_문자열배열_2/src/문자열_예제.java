@@ -145,15 +145,30 @@ public class 문자열_예제 {
 		}
 		System.out.println("오름차순 정렬 후:");
 		System.out.println(Arrays.toString(arr5));
-		for(int i=0;i<arr5.length-1;i++)
+//		for(int i=0;i<arr5.length-1;i++)
+//		{
+//			for(int j=i+1;j<arr5.length;j++)
+//			{
+//				if(arr5[i]<arr5[j])
+//				{
+//					char temp=arr5[i];
+//					arr5[i]=arr5[j];
+//					arr5[j]=temp;
+//				}
+//			}
+//		}
+//		System.out.println("내림차순 정렬 후:");
+//		System.out.println(Arrays.toString(arr5));
+		
+		for(int i=0;i<arr5.length;i++)
 		{
-			for(int j=i+1;j<arr5.length;j++)
+			for(int j=0;j<arr5.length-1;j++)
 			{
-				if(arr5[i]<arr5[j])
+				if(arr5[j]<arr5[j+1])
 				{
-					char temp=arr5[i];
-					arr5[i]=arr5[j];
-					arr5[j]=temp;
+					char temp=arr5[j];
+					arr5[j]=arr5[j+1];
+					arr5[j+1]=temp;
 				}
 			}
 		}
