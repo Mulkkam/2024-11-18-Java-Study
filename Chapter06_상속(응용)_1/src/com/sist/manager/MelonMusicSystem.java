@@ -48,4 +48,7 @@ public class MelonMusicSystem extends GenieMusicSystem {
 	// musicFindData(String fd)
 	// static, 생성자, 초기화 블록 제외 => 추가
 	// 포함 클래스를 더 많이 사용한다 => 제약 X
+	public static void main(String[] args) {
+		MelonMusicSystem ms=new MelonMusicSystem();
+	}
 }
