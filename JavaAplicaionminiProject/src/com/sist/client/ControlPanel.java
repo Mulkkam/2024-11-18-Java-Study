@@ -1,47 +1,53 @@
 package com.sist.client;
 import java.awt.Color;
 import java.awt.Graphics;
-
-import javax.swing.*;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.*;
 
+import javax.swing.*;
+// 화면 변경 
 public class ControlPanel extends JPanel{
-	Image back;
-	JLabel la1,la2;
-	JTextField tf;
-	JPasswordField pf;
-	JButton b1,b2;
-	public ControlPanel()
-	{
-		back=Toolkit.getDefaultToolkit().getImage("C:\\JavaDev\\Background.jpg");
-		la1=new JLabel("ID");
-		la2=new JLabel("Password");
-		tf=new JTextField();
-		pf=new JPasswordField();
-		b1=new JButton("로그인");
-		b2=new JButton("취소");
-		
-        // 배치 => 실행과 동시에 실행 명령 => 초기화 => 생성자
-		setLayout(null);
-		la1.setBounds(10, 15, 80, 30);
-		tf.setBounds(95, 15, 200, 30);
-		add(la1);add(tf);
-		
-		la2.setBounds(10, 50, 80, 30);
-		pf.setBounds(95, 50, 200, 30);
-		add(la2);add(pf);
-		
-		JPanel p=new JPanel();
-		p.setOpaque(false);
-		p.add(b1);
-		p.add(b2);
-		p.setBounds(50, 90, 285, 35);
-		add(p);
-	}
-	@Override
-	public void paintComponent(Graphics g)
-	{
-		g.drawImage(back, 0, 0, getWidth(), getHeight(), this);
-	}
+    HomePanel hp;
+    ChatPanel cp;
+    FoodGenrePanel fgp;
+    FoodFindPanel ffp;
+    FoodDetailPanel fdp;
+    BoardList bList;
+    BoardInsert bInsert;
+    BoardDetail bDetail;
+    BoardUpdate bUpdate;
+    BoardReply bReply;
+    BoardDelete bDelete;
+    NewsPanel np;
+    CardLayout card=new CardLayout();
+    public ControlPanel()
+    {
+    	setLayout(card);
+    	hp=new HomePanel(this);
+    	add("HOME",hp);
+    	cp=new ChatPanel(this);
+    	add("CHAT",cp);
+    	fgp=new FoodGenrePanel(this);
+    	add("FOOD",cp);
+    	ffp=new FoodFindPanel(this);
+    	add("FIND",ffp);
+    	fdp=new FoodDetailPanel(this);
+    	add("DETAIL",fdp);
+    	bList=new BoardList(this);
+    	add("BLIST",bList);
+    	bInsert=new BoardInsert(this);
+    	add("BINSERT",bInsert);
+    	bDetail=new BoardDetail(this);
+    	add("BDETAIL",bDetail);
+    	bUpdate=new BoardUpdate(this);
+    	add("BUPDATE",bUpdate);
+    	bReply=new BoardReply(this);
+    	add("BREPLY",bReply);
+    	bDelete=new BoardDelete(this); // => jsp(메소드) => URL주소
+    	add("BDELETE",bDelete);
+    	np=new NewsPanel(this);
+    	add("NP",np);
+    	}
+  
 }
